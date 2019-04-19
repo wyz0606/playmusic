@@ -60,7 +60,7 @@ function changeBackgroundImage(){
    				"Authorization": "Client-ID dff55246a193c9d14d513c0cdde1ac11958055b2533c08df372c298e9dd8720d",
   			},
   			success: function(data){
-  				var imgurl = data.urls.full
+  				var imgurl = data.urls.regular
   				$('#bg').attr("src", imgurl);
   			}
 	})
