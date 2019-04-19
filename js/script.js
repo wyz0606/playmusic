@@ -61,7 +61,7 @@ function changeBackgroundImage(){
   			},
   			success: function(data){
   				var imgurl = data.urls.full
-  				$('#back').attr("src", imgurl);
+  				$('#bg').attr("src", imgurl);
   			}
 	})
 }
