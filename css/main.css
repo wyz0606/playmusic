@@ -2,15 +2,32 @@ body,html, .main{
 	height: 100%;
 	margin: 0px;
 	font-family: 'Noto Sans', sans-serif;
+	
+}
+
+body{
+	background-color: #808080;
+	overflow: hidden;
 }
 
 #back{
-	position: absolute;
+	position: fixed;
 	display: block;
-	min-width: 100%;
-	min-height: 100vh;
-	z-index: -1;
+	min-width: 90%;
+	min-height: 90vh;
+	left:5%;
+	top: 5vh;
+	z-index: 0;
 	background-color: white;
+	border-radius: 40px;
+	box-shadow: 0px 5px 60px black;
+	border-width: 0px;
+	opacity: 0.8;
+}
+
+#back:active{
+	transform: scale(0.99, 0.99);
+	box-shadow: 0px 5px 30px black;
 }
 
 p{
@@ -19,7 +36,7 @@ p{
 
 #title{
 	position: absolute;
-	top: 50px;
+	top: 80px;
 	left: 50%;
 	transform: translate(-50%);
 	display: block;
@@ -35,7 +52,7 @@ p{
 
 #cover{
 	position: absolute;
-	margin-top: 160px;
+	margin-top: 180px;
 	left: 50%;
 	transform: translate(-50%);
 	width: 500px;
@@ -43,7 +60,7 @@ p{
 	background: url("image/album.png");
 	background-size: 500px 500px;
 	border-radius: 10px;
-	z-index: 0;
+	z-index: 1;
 }
 
 #control{
@@ -56,7 +73,7 @@ p{
 	background: url("image/pause.png");
 	background-size: 500px 500px;
 	opacity: 0;
-	z-index: 1;
+	z-index: 2;
 	transition: opacity 0.5s;
 	display: none;
 }
@@ -70,7 +87,7 @@ p{
 	/*z-index: 1;*/
 	display: block;
 	left: 50%;
-	bottom: 90px;
+	bottom: 110px;
 	transform: translate(-50%);
 	margin-top: 50px;
 	/*margin: 50px auto 0px;*/
@@ -86,27 +103,42 @@ p{
 	cursor: pointer;
 }
 
-#switch span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
+#switch{
+	box-shadow: 0px 0px 10px #808080;
 }
 
-#switch span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
+
+
+span {
+ 	cursor: pointer;
+ 	display: inline-block;
+	position: relative;
+ 	transition: 0.5s;
+
+}
+
+span:after {
+ 	content: '\00bb';
+  	position: absolute;
+ 	opacity: 0;
+  	top: 0;
+  	right: -20px;
+  	transition: 0.5s;
 }
 
 #switch:hover span {
-  padding-right: 25px;
+  	padding-right: 25px;
 }
 
 #switch:hover span:after {
   opacity: 1;
   right: 0;
 }
+
+#switch:active{
+	/*transform: scale(0.99, 0.99);*/
+	box-shadow: 0px 0px 0px #808080;
+	transition: 0s;
+}
+
+
